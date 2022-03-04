@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:background="#8033691E">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardBackgroundColor="?attr/colorPrimary"
+        app:cardCornerRadius="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/labelNameItem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iFloraItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/image_flora"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/default_flora"
+            tools:ignore="ImageContrastCheck" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/labelNameItem"
+        style="@style/labelItemStyle"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/name"
+        app:layout_constraintBottom_toTopOf="@+id/labelFamilyItem"
+        app:layout_constraintEnd_toStartOf="@+id/tvNameItem"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvNameItem"
+        style="@style/textItemStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/labelNameItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/labelNameItem"
+        app:layout_constraintTop_toTopOf="@+id/labelNameItem"
+        tools:ignore="TextContrastCheck"
+        tools:text="hglkgjkgkj" />
+
+    <TextView
+        android:id="@+id/labelFamilyItem"
+        style="@style/labelItemStyle"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/family"
+        app:layout_constraintBottom_toTopOf="@+id/labellHabitatItem"
+        app:layout_constraintEnd_toStartOf="@+id/tvFamilyItem"
+        app:layout_constraintStart_toStartOf="@+id/labelNameItem"
+        app:layout_constraintTop_toBottomOf="@+id/labelNameItem"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvFamilyItem"
+        style="@style/textItemStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/labelFamilyItem"
+        app:layout_constraintEnd_toEndOf="@+id/tvNameItem"
+        app:layout_constraintStart_toEndOf="@+id/labelFamilyItem"
+        app:layout_constraintTop_toTopOf="@+id/labelFamilyItem"
+        tools:ignore="TextContrastCheck"
+        tools:text="ghljkgkgk" />
+
+    <TextView
+        android:id="@+id/labellHabitatItem"
+        style="@style/labelItemStyle"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/habitat"
+        app:layout_constraintBottom_toTopOf="@+id/labelAltitudItem"
+        app:layout_constraintEnd_toStartOf="@+id/tvHabitatItem"
+        app:layout_constraintStart_toStartOf="@+id/labelNameItem"
+        app:layout_constraintTop_toBottomOf="@+id/labelFamilyItem"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvHabitatItem"
+        style="@style/textItemStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/labellHabitatItem"
+        app:layout_constraintEnd_toEndOf="@+id/tvNameItem"
+        app:layout_constraintStart_toEndOf="@+id/labellHabitatItem"
+        app:layout_constraintTop_toTopOf="@+id/labellHabitatItem"
+        tools:ignore="TextContrastCheck"
+        tools:text="jghljgljgl" />
+
+    <TextView
+        android:id="@+id/labelAltitudItem"
+        style="@style/labelItemStyle"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/altitude"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvAltitudItem"
+        app:layout_constraintStart_toStartOf="@+id/labelNameItem"
+        app:layout_constraintTop_toBottomOf="@+id/labellHabitatItem"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvAltitudItem"
+        style="@style/textItemStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/labelAltitudItem"
+        app:layout_constraintEnd_toEndOf="@+id/tvNameItem"
+        app:layout_constraintStart_toEndOf="@+id/labelAltitudItem"
+        app:layout_constraintTop_toTopOf="@+id/labelAltitudItem"
+        tools:ignore="TextContrastCheck"
+        tools:text="hlkhlñkhlñ" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

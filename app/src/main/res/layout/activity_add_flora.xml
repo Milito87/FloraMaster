@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".view.AddFloraActivity">
+
+    <TextView
+        android:id="@+id/tvTitleAdd"
+        style="@style/titleStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:drawableStart="@drawable/default_flora"
+        android:drawableEnd="@drawable/default_flora"
+        android:text="@string/create_a_new_flora"
+        app:layout_constraintBottom_toTopOf="@+id/tvAddName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvAddName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/green_900"
+        app:boxStrokeWidth="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvAddFamily"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitleAdd"
+        app:layout_constraintStart_toStartOf="@+id/tvTitleAdd"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleAdd">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etAddName"
+            style="@style/editStyle"
+            android:layout_width="match_parent"
+            android:background="#80C5E1A5"
+            android:hint="@string/name"
+            tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvAddFamily"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/green_900"
+        app:layout_constraintBottom_toTopOf="@+id/tvAddHabitat"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitleAdd"
+        app:layout_constraintStart_toStartOf="@+id/tvTitleAdd"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etAddFamily"
+            style="@style/editStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/family"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvAddHabitat"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/green_900"
+        app:layout_constraintBottom_toTopOf="@+id/tvAddAltitud"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitleAdd"
+        app:layout_constraintStart_toStartOf="@+id/tvTitleAdd"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddFamily">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etAddHabitat"
+            style="@style/editStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/habitat"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvAddAltitud"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/green_900"
+        app:layout_constraintBottom_toTopOf="@+id/btAddFlora"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitleAdd"
+        app:layout_constraintStart_toStartOf="@+id/tvTitleAdd"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddHabitat">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etAddAltitud"
+            style="@style/editStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/altitude"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btAddFlora"
+        style="@style/titleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitleAdd"
+        app:layout_constraintStart_toStartOf="@+id/tvTitleAdd"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddAltitud"
+        tools:ignore="TextContrastCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>

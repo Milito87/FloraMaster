@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".view.EditActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvNameEdit"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:boxStrokeColor="@color/white"
+        app:boxStrokeWidth="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvFamiliyEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/default_flora"
+            android:fontFamily="@font/underdog"
+            android:gravity="center"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvFamiliyEdit"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/white"
+        app:boxStrokeWidth="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvHabitatEdit"
+        app:layout_constraintEnd_toEndOf="@+id/tvNameEdit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/tvNameEdit"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameEdit">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etFamilyEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/underdog"
+            android:gravity="center"
+            android:hint="@string/family"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvHabitatEdit"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/white"
+        app:boxStrokeWidth="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvAltitudeEdit"
+        app:layout_constraintEnd_toEndOf="@+id/tvNameEdit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/tvNameEdit"
+        app:layout_constraintTop_toBottomOf="@+id/tvFamiliyEdit">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etHabitatEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/underdog"
+            android:gravity="center"
+            android:hint="@string/habitat"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvAltitudeEdit"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/white"
+        app:boxStrokeWidth="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/btCleanEdit"
+        app:layout_constraintEnd_toEndOf="@+id/tvNameEdit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/tvNameEdit"
+        app:layout_constraintTop_toBottomOf="@+id/tvHabitatEdit">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etAltitudeEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/underdog"
+            android:gravity="center"
+            android:hint="@string/altitude"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btCleanEdit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/teal_500"
+        android:text="@string/clean"
+        android:textSize="12sp"
+        app:icon="@android:drawable/ic_menu_mylocation"
+        app:layout_constraintBottom_toBottomOf="@+id/btChangeEdit"
+        app:layout_constraintEnd_toStartOf="@+id/btChangeEdit"
+        app:layout_constraintStart_toStartOf="@+id/tvAltitudeEdit"
+        app:layout_constraintTop_toTopOf="@+id/btChangeEdit"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btChangeEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:textSize="12sp"
+        app:icon="@drawable/ic_baseline_edit_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btDeleteEdit"
+        app:layout_constraintStart_toEndOf="@+id/btCleanEdit"
+        app:layout_constraintTop_toBottomOf="@+id/tvAltitudeEdit"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btDeleteEdit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#FF5722"
+        android:text="@string/delete"
+        android:textSize="12sp"
+        app:icon="@drawable/ic_baseline_delete_24"
+        app:layout_constraintBottom_toBottomOf="@+id/btChangeEdit"
+        app:layout_constraintEnd_toEndOf="@+id/tvNameEdit"
+        app:layout_constraintStart_toEndOf="@+id/btChangeEdit"
+        app:layout_constraintTop_toTopOf="@+id/btChangeEdit"
+        tools:ignore="TextContrastCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>
